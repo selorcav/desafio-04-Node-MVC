@@ -1,3 +1,4 @@
+var User = require("../models/user");
 exports.createUser = function(req, res){
     console.log(req.body);
     if(validate (req.body)){
