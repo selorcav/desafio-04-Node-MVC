@@ -27,7 +27,6 @@ en archivo "users.js" de carpeta "routes" pegar:
 var usersController = require('../controllers/users')
 
 
-
 en archivo "users.js" de carpeta controllers pegar:
 
 exports.createUser = function(req, res){
