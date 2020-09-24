@@ -4,12 +4,13 @@ var usersController = require('../controllers/users')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('users', { title: 'Vista de usuarios' });
+  // res.render('users', { title: 'Vista de usuarios' });
+  usersController.all_users(req, res);
 });
 /* POST users listing. */
 router.post('/', function(req, res, next) {
   // res.send('Probando');
-  usersController.createUser(req, res);
+  usersController.createUser(req, res)
 });
 
 module.exports = router;

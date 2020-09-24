@@ -7,5 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <p>Bienvenido a <%= title %></p>
+
+    <h1>Usuarios creados</h1>
+    <ol>
+      <% users.forEach(function(user){ %>
+      <li><%=user.name%>-<%=user.lastname%></li>
+      <%})%>
+    </ol>
   </body>
 </html>

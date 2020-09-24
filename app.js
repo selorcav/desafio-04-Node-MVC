@@ -25,7 +25,7 @@ app.use('/users', usersRouter);
 //Import the mongoose module
 var mongoose = require('mongoose');
 //Set up default mongoose connection
-var mongoDB = (process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/test');
+var mongoDB = (process.env.MONGODB_URI || 'mongodb+srv://usuario1:usuariodb@cluster0.rmei4.mongodb.net/formMongoDB?retryWrites=true&w=majority');
 console.log('Connecting to database...');
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 // Get Mongoose to use the global promise library
@@ -34,6 +34,8 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 //Bind connection to error event (to get notification of connection errors)
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

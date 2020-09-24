@@ -8,17 +8,27 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
-  <body>
-    <h1><%= title %></h1>
+<body>
+  <h1><%= title %></h1>
 
-    <form class="form-register" method="POST" action="/users">
-      <div class="contenedor-inputs"> <input type="text" id="name" name="name" placeholder="Nombre" class="inputcss">
-        <input type="text" id="lastname" name="lastname" placeholder="Apellidos" class="inputcss"> <input type="email"
-          id="email" name="email" placeholder="Correo" class="inputcss"> <input type="password" id="password"
-          name="password" placeholder="Contraseña" class="inputcss"> <input type="submit" value="Registrar"
-          class="btn-enviar">
-      </div>
-    </form>
+  <form class="form-register" method="POST" action="/users">
+    <div class="contenedor-inputs"> <input type="text" id="name" name="name" placeholder="Nombre" class="inputcss">
+      <input type="text" id="lastname" name="lastname" placeholder="Apellidos" class="inputcss"> <input type="email"
+        id="email" name="email" placeholder="Correo" class="inputcss"> <input type="password" id="password"
+        name="password" placeholder="Contraseña" class="inputcss"> <input type="submit" value="Registrar"
+        class="btn-enviar">
+    </div>
+  </form>
+
+  <h1>Usuarios creados</h1>
+  <ol>
+    <% users.forEach(function(user){ %>
+      <li><%=user.name%></li>
+      <li><%=user.lastname%></li>
+
+      <%})%>
+  </ol>
+  
 
 
 
@@ -31,6 +41,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"></script>
-  </body>
+</body>
 
-  </html>
+</html>
